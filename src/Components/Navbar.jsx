@@ -52,6 +52,7 @@ function Navbar() {
   display: flex;
   align-items: center;
   gap: 5px;
+  margin-right: 20px;
 `;
   return (
     <Container>
