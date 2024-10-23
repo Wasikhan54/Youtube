@@ -17,8 +17,9 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
+import { Link } from 'react-router-dom';
 
-function Menu({ theme, setTheme }) {
+function Menu({ theme, setTheme , }) {
     const Container = styled.div`
    flex: 1;
     background-color: ${({ theme }) => theme.primary};
@@ -49,6 +50,9 @@ function Menu({ theme, setTheme }) {
     cursor: pointer;
     font-size: 14px;
     padding: 3px 0px;
+    &:hover {
+      background-color: ${({ theme }) => theme.textSoft}; 
+    }
     `
     const Hr = styled.hr`
   margin: 15px 0px;
@@ -71,10 +75,12 @@ const Button = styled.button`
   return (
     <Container>
         <Wrapper>
+          <Link to="/" style={{textDecoration:"none", color:"inherit"}}>
             <Logo>
                 <Img src= {LogoPic}/>
                 Youtube
             </Logo>
+          </Link>
             <Item>
           <HomeIcon />
           Home

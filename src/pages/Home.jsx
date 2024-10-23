@@ -14,6 +14,7 @@ function Home() {
 
     <Container>
         <Card />
+        <Card />
         <Card/>
         <Card/>
         <Card/>
